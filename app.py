@@ -74,6 +74,8 @@ def editrecord():
         return render_template('record.html', button_text = button_text, form_type='edit')
 
 
+#if __name__ == "__main__":
+#    app.run(debug=True)
 
 
 
