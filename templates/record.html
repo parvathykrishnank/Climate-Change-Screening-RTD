@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Risk Threshold Database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../static/assets/images/favicon.ico">
+
+    <!-- Layout config Js -->
+    <script src="../static/assets/js/layout.js"></script>
+    <!-- Bootstrap Css -->
+    <link href="../static/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="../static/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- App Css-->
+    <link href="../static/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <!-- custom Css-->
+    <link href="../static/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        <header id="page-topbar">
+    <div class="layout-width">
+        <div class="navbar-header">
+            <div class="d-flex">
+                <!-- LOGO -->
+                <div class="navbar-brand-box horizontal-logo">
+                            <a href="/" class="logo logo-gpbp">
+                                <span class="logo-sm">
+                                    <img src="../static/assets/images/logo-gpbp-edited.png" alt="" height="100">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="../static/assets/images/logo-gpbp-edited.png" alt="" height="100">
+                                </span>
+                            </a>
+
+                            <a href="/" class="logo logo-gpbp">
+                                <span class="logo-sm">
+                                    <img src="../static/assets/images/logo-gpbp-edited.png" alt="" height="100">
+                                </span>
+                                <span class="logo-lg">
+                                    <img src="../static/assets/images/logo-gpbp-edited.png" alt="" height="100">
+                                </span>
+                            </a>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</header>
+
+<!-- removeNotificationModal -->
+<div id="removeNotificationModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="NotificationModalbtn-close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mt-2 text-center">
+                    <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
+                    <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
+                        <h4>Are you sure ?</h4>
+                        <p class="text-muted mx-4 mb-0">Are you sure you want to remove this Notification ?</p>
+                    </div>
+                </div>
+                <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
+                    <button type="button" class="btn w-sm btn-light" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn w-sm btn-danger" id="delete-notification">Yes, Delete It!</button>
+                </div>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+        <!-- ========== App Menu ========== -->
+        <div class="app-menu navbar-menu">
+            <!-- LOGO -->
+                       <div class="navbar-brand-box">
+                <!-- Dark Logo-->
+                <a href="/" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="../static/assets/images/logo-gpbp-edited.png" alt="" height="100">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="../static/assets/images/logo-gpbp-edited.png" alt="" height="100">
+                    </span>
+                </a>
+                <!-- Light Logo-->
+                <a href="/" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="../static/assets/images/logo-gpbp-edited.png" alt="" height="100">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="../static/assets/images/logo-gpbp-edited.png" alt="" height="100">
+                    </span>
+                </a>
+                <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
+                    <i class="ri-record-circle-line"></i>
+                </button>
+            </div>
+
+            <div id="scrollbar">
+                <div class="container-fluid">
+
+                    <div id="two-column-menu">
+                    </div>
+                    <ul class="navbar-nav" id="navbar-nav">
+                        <li class="menu-title"><span data-key="t-menu">Menu</span></li>
+                        <li class="nav-item">
+                            <a class="nav-link menu-link" href="#sidebarDashboards" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarDashboards">
+                                <i class="ri-dashboard-2-line"></i> <span data-key="t-dashboards">Dashboard</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarDashboards">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a href="/" class="nav-link" data-key="t-rtd"> Risk Threshold Database </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/record" class="nav-link" data-key="t-newrec"> Add New Record</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li> <!-- end Dashboard Menu -->
+                    </ul>
+                </div>
+                <!-- Sidebar -->
+            </div>
+
+            <div class="sidebar-background"></div>
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- Vertical Overlay-->
+        <div class="vertical-overlay"></div>
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start TITLE ROW  -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                                <h1>Geospatial Planning and Budgeting Platform</h1>
+                                <h3 class="mb-sm-0">A user-friendly web-interface platform through which Ministries of Finance, Economy, Planning and sector agencies at national and local levels can review public infrastructure investments and assets footprints against geospatial climate exposure layers from current Earth Observation (EO) technology resources as part of Public Investment Management (PIM) and Public Asset Management (PAM) processes</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end TITLE ROW -->
+
+                    <!-- start DATABASE ROW  -->
+                    <div class="row">
+                        <div class="card">
+                                <div class="card-header align-items-center d-flex">
+                                    <h4 class="card-title mb-0 flex-grow-1">Add new Threshold to the database</h4>
+                                </div><!-- end card header -->
+                                <div class="card-body">
+                                    <p class="text-muted"><code>Hazard Criticality Threshold</code> Risk is calculated based on the magnitude (e.g. 30°C) of a given hazard/climate parameter (e.g. daily maximum temperature) that is liable to cause material adverse consequences for the integrity, efficiency, or performance of a given asset type.</p>
+                                    <p class="text-muted"><code>Exposure Tolerance Threshold</code> Risk is calculated based the aggregate frequency/duration (in days) within a given unit of time (e.g. one year) that a given Hazard Criticality Threshold is exceeded. Thresholds may be tailored by the user taking account of local risk tolerance or assumed levels of resilience of a given asset type.</p>
+
+                                        <form action="/record" method='POST'>
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="identifierID" class="form-label">ID</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <input type="text" class="form-control" id="identifierID" placeholder="Autogenerated" disabled>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="climateParameter" class="form-label">Climate Parameter</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <select class="form-control" data-choices name="climateParameter" id="climateParameter" required>
+                                                    <option value="Heat">Heat</option>
+                                                    <option value="Precipitation">Precipitation</option>
+                                                </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="riskTrigger" class="form-label">Risk Trigger</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <select class="form-control" data-choices name="riskTrigger" id="riskTrigger">
+                                                    <option value="Maximum Temperature">Maximum Temperature</option>
+                                                    <option value="Minimum Temperature">Minimum Temperature</option>
+                                                    <option value="Heat Wave">Heat Wave</option>
+                                                    <option value="Maximum Precipitation">Maximum Precipitation</option>
+                                                    <option value="Cumulative Precipitation">Cumulative Precipitation</option>
+                                                </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="templateChoice" class="form-label">Template</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <select class="form-control" data-choices name="templateChoice" id="templateChoice">
+                                                    <option value="Exposure Tolerance Threshold">Exposure Tolerance Threshold</option>
+                                                    <option value="Hazard Criticality Threshold">Hazard Criticality Threshold</option>
+                                                </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="valueParameter" class="form-label">Value of Parameter</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <input name="valueParameter" id="valueParameter" type="text" class="form-control rounded-end" value="" placeholder="Enter value" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="unitValue" class="form-label">Unit</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <select class="form-control" data-choices name="unitValue" id="unitValue">
+                                                    <option value=""></option>
+                                                    <option value="degree celsius">degree celsius</option>
+                                                    <option value="mm/day">mm/day</option>
+                                                </select>
+                                                </div>
+                                            </div>
+
+                                             <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="thresholds" class="form-label">Thresholds</label>
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <input required type="text" class="form-control rounded-end" id="thres1" name="thres1" value="" placeholder="Threshold 1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <input required type="text" class="form-control rounded-end" id="thres2" name="thres2" value="" placeholder="Threshold 2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <input type="text" class="form-control rounded-end" id="thres3" name="thres3" value="" placeholder="Threshold 3" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+                                                </div>
+                                                <div class="col-lg-2">
+                                                    <input type="text" class="form-control rounded-end" id="thres4" name="thres4" value="" placeholder="Threshold 4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" />
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="unitThreshold" class="form-label">Threshold Unit</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <select required class="form-control" data-choices name="unitThreshold" id="unitThreshold">
+                                                    <option value="degree celsius">degree celsius</option>
+                                                    <option value="mm/day">mm/day</option>
+                                                    <option value="Number of days">Number of days</option>
+                                                </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="countryTags" class="form-label">Country Tags</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <select class="form-control" id="countryTags" data-choices data-choices-removeItem name="countryTags" multiple>
+                                                            <option value="Global" selected>Global</option>
+                                                            <option value="Armenia">Armenia</option>
+                                                            <option value="Georgia">Goergia</option>
+                                                            <option value="Vietnam">Vietnam</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="appTags" class="form-label">Application Tags</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <select required class="form-control" id="appTags" data-choices data-choices-removeItem name="appTags" multiple>
+                                                            <option value="A1.2">A1.2</option>
+                                                            <option value="A1.3">A1.3</option>
+                                                            <option value="A1.6">A1.6</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="descriptionText" class="form-label">Description</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <textarea required class="form-control" id="descriptionText" name="descriptionText" rows="4"></textarea>
+                                                </div>
+                                            </div>
+
+                                             <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="urlMore" class="form-label">URL</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <input type="url" class="form-control" id="urlMore" name="urlMore" placeholder="Enter URL to the documentation">
+                                                </div>
+                                            </div>
+
+                                            <div class="text-end">
+                                                <button type="submit" class="btn btn-primary">{{button_text}}</button>
+                                            </div>
+                                        </form>
+                                </div>
+                            </div>
+                    </div>
+                    <!--end DATABASE row-->
+
+                </div> <!-- container-fluid -->
+            </div>
+            <!-- End Page-content -->
+
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <script>document.write(new Date().getFullYear())</script> © GPBP.
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end d-none d-sm-block">
+                                Geospatial Planning and Budgeting Platform
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end main content-->
+
+    </div>
+    <!-- END layout-wrapper -->
+
+
+
+    <!--start back-to-top-->
+    <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+    <!--end back-to-top-->
+
+    <!--preloader-->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner-border text-primary avatar-sm" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="../static/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="../static/assets/libs/node-waves/waves.min.js"></script>
+    <script src="../static/assets/libs/feather-icons/feather.min.js"></script>
+    <script src="../static/assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="../static/assets/js/plugins.js"></script>
+
+    <!-- prismjs plugin -->
+    <script src="../static/assets/libs/prismjs/prism.js"></script>
+
+    <script src="../static/assets/js/app.js"></script>
+
+</body>
+
+</html>
