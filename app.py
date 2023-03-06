@@ -6,8 +6,14 @@ import string
 app = Flask(__name__)
 
 @app.route('/')
+def landing():
+    return render_template('landing.html')
+
+@app.route('/index')
 def index():
     df_records = pd.read_excel('database.xlsx')
+    df_records = df_records.dropna(how='all')
+    df_records = df_records[df_records['ID'].astype(str)!='nan']
     df_records = df_records.fillna('')
     return render_template('index.html',row_data=list(df_records.values.tolist()))
 
@@ -74,8 +80,8 @@ def editrecord():
         return render_template('record.html', button_text = button_text, form_type='edit')
 
 
-#if __name__ == "__main__":
-#    app.run(debug=True)
+if __name__ == "__main__":
+   app.run(debug=True,port=8080)
 
 
 
