@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def landing():
-    return render_template('landing.html')
+    return render_template('rtd-homepage.html')
 
 @app.route('/index')
 def index():
@@ -23,6 +23,7 @@ def record():
         climateParameter = request.form['climateParameter']
         riskTrigger = request.form['riskTrigger']
         templateChoice = request.form['templateChoice']
+        levelDisruption = request.form['levelDisruption']
         
         valueParameter = request.form['valueParameter']
         unitValue = request.form['unitValue']
@@ -40,8 +41,13 @@ def record():
         appTags = request.form.getlist('appTags')
         appTags = ','.join(appTags)
 
+        assetTags = request.form.getlist('assetTags')
+        assetTags = ','.join(assetTags)
+
         descriptionText = request.form['descriptionText']
         urlMore = request.form['urlMore']
+
+        shortDescription = request.form['shortDescription']
 
         id_str1 = str(riskTrigger.split(' ')[0][0])+''+str(riskTrigger.split(' ')[1][0])
         id_str2 = str(templateChoice.split(' ')[0][0])+''+str(templateChoice.split(' ')[1][0])+''+str(templateChoice.split(' ')[2][0])
@@ -52,7 +58,9 @@ def record():
         df_new_record = pd.DataFrame([[idRandom,riskTrigger,templateChoice,
                     valueParameter,unitValue,
                     thres1,thres2,thres3,thres4,unitThreshold,
-                    climateParameter,appTags,countryTags,descriptionText,urlMore]])
+                    climateParameter,appTags,countryTags,descriptionText,urlMore,
+                    shortDescription,levelDisruption,assetTags]])
+        
         df_new_record.columns = df_records.columns
         
         df_combined_records = df_records.append(df_new_record)

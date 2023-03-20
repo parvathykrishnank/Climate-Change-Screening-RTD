@@ -34,11 +34,10 @@
 
 </head>
 
-<body>
+<body style="margin: 0; background: #f4f6f8">
 
     <!-- Begin page -->
     <div id="layout-wrapper">
-
         <header id="page-topbar">
             <div class="layout-width">
                 <div class="navbar-header">
@@ -156,102 +155,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h1>Geospatial Planning and Budgeting Platform</h1>
-                                <h3 class="mb-sm-0">A user-friendly web-interface platform through which Ministries of Finance, Economy, Planning and sector agencies at national and local levels can review public infrastructure investments and assets footprints against geospatial climate exposure layers from current Earth Observation (EO) technology resources as part of Public Investment Management (PIM) and Public Asset Management (PAM) processes</h3>
+                                <h1>Climate Change Risk Threshold Database</h1>
+                                <h3 class="mb-sm-0">The Risk Threshold Database (RTD) compiles climate parameter levels whose exceedence would increase the likelihood of damages and losses (D&Ls) associated with a given asset, investment, or locality.  These can be applied to climate change screening of public assets, investments, and sub-national governments using the Geospatial Planning and Budgeting Platform (GPBP).</h3>
 
                             </div>
                         </div>
                     </div>
                     <!-- end TITLE ROW -->
-
-                    <!-- start DASHBOARD ROW  -->
-                    <div class="row">
-                        <div class="col-xxl-12">
-                            <div class="d-flex flex-column h-100">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex justify-content-between">
-                                                    <div>
-                                                        <p class="fw-medium text-muted mb-0">Database Entries</p>
-                                                        <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value" data-target="5">0</span> Thresholds</h2>
-                                                    </div>
-                                                    <div>
-                                                        <div class="avatar-sm flex-shrink-0">
-                                                            <span class="avatar-title bg-soft-info rounded-circle fs-2">
-                                                                <i data-feather="external-link" class="text-info"></i>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div> <!-- end card-->
-                                    </div> <!-- end col-->
-                                    <div class="col-md-3">
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex justify-content-between">
-                                                    <div>
-                                                        <p class="fw-medium text-muted mb-0">Last Updated Date</p>
-                                                        <h2 class="mt-4 ff-secondary fw-semibold">Dec 31st 2022</h2>
-                                                    </div>
-                                                    <div>
-                                                        <div class="avatar-sm flex-shrink-0">
-                                                            <span class="avatar-title bg-soft-info rounded-circle fs-2">
-                                                                <i data-feather="clock" class="text-info"></i>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div> <!-- end card-->
-                                    </div> <!-- end col-->
-                                    <div class="col-md-3">
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex justify-content-between">
-                                                    <div>
-                                                        <p class="fw-medium text-muted mb-0">Countries</p>
-                                                        <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value" data-target="3">0</span> + Global</h2>
-                                                    </div>
-                                                    <div>
-                                                        <div class="avatar-sm flex-shrink-0">
-                                                            <span class="avatar-title bg-soft-info rounded-circle fs-2">
-                                                                <i data-feather="users" class="text-info"></i>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div> <!-- end card-->
-                                    </div> <!-- end col-->
-                                    <div class="col-md-3">
-                                        <div class="card card-animate">
-                                            <div class="card-body">
-                                                <div class="d-flex justify-content-between">
-                                                    <div>
-                                                        <p class="fw-medium text-muted mb-0">Application Tags</p>
-                                                        <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value" data-target="3">0</span> NACE Codes </h2>
-                                                    </div>
-                                                    <div>
-                                                        <div class="avatar-sm flex-shrink-0">
-                                                            <span class="avatar-title bg-soft-info rounded-circle fs-2">
-                                                                <i data-feather="users" class="text-info"></i>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><!-- end card body -->
-                                        </div> <!-- end card-->
-                                    </div> <!-- end col-->
-                                </div> <!-- end row-->
-
-                            </div>
-                        </div> <!-- end col-->
-
-                    </div> 
-                    <!-- end DASHBOARDrow-->
 
                     <!-- start DATABASE ROW  -->
                     <div class="row">
@@ -267,39 +177,30 @@
                                     <table id="scroll-horizontal" class="table table-bordered dt-responsive nowrap align-middle mdl-data-table" style="width:100%">
                                         <thead>
                                             <tr>
-                                                <th>ID</th>
-                                                <th>Risk Trigger</th>
+                                                <th>ID <br/><font size="1">Short Description</font></th>
+                                                <th>Climate Parameter <br/><font size="1">Risk Trigger</font></th>
                                                 <th>Template</th>
                                                 <th>Value</th>
-                                                <th>Unit (Value)</th>
-                                                <th>Threshold 1</th>
-                                                <th>Threshold 2</th>
-                                                <th>Threshold 3</th>
-                                                <th>Threshold 4</th>
-                                                <th>Unit (Threshold)</th>
-                                                <th>Climate Parameter</th>
-                                                <th>Application Tags</th>
+                                                <th>Level of Disruption</th>
+                                                <th>Threshold <br/><font size="1">Probability of Disruption</font></th>
+                                                <th>Applicable asset types <br/><font size="1">Applicable NACE Codes</font></th>
                                                 <th>Country Tags</th>
-                                                <th>Description</th>
+                                                <th>Description (link)</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             {% for row in row_data %}
                                             <tr>
-                                                <td>{{row[0]}}</td>
-                                                <td>{{row[1]}}</td>
+                                                <td>{{row[0]}}<br/><font size="1">{{row[15]}}</font></td>
+                                                <td>{{row[10]}}<br/><font size="1">{{row[1]}}</font></td>
                                                 <td>{{row[2]}}</td>
-                                                <td>{{row[3]}}</td>
-                                                <td>{{row[4]}}</td>
-                                                <td><span class="badge bg-primary">{{row[5]}}</span></td>
-                                                <td>{{row[6]}}</td>
-                                                <td>{{row[7]}}</td>
-                                                <td>{{row[8]}}</td>
-                                                <td>{{row[9]}}</td>
-                                                <td>{{row[10]}}</td>
-                                                <td>{{row[11]}}</td>
-                                                <td>{{row[12]}}</td>
+                                                <td>{{row[3]}} {{row[4]}}</td>  
+                                                <th>{{row[16]}}</th>
+                                                <td><font size="0.5">{{row[9]}}  </font><span class="badge bg-info">{{row[5]}}</span> <span class="badge bg-primary">{{row[6]}}</span><span class="badge bg-warning">{{row[7]}}</span><span class="badge bg-danger">{{row[8]}}</span></td>
+                                                <th>{{row[11]}} <br/><font size="1">{{row[17]}}</font></th>
+                                                <td>{{row[12]}}</td>    
+
                                                 <td><a href="{{row[14]}}" target="_blank">{{row[13]}}</a></td>
                                                 <td>
                                                     <div class="dropdown d-inline-block">
