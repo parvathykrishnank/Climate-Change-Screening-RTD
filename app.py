@@ -70,7 +70,10 @@ def record():
 
 @app.route('/record', methods=['GET'])
 def recordroute():
-    return render_template('record.html',button_text='Update Risk Threshold Database', form_type='main_route')
+    df_records = pd.read_excel('nace_code_list.xlsx')
+    return render_template('record.html',
+        button_text='Update Risk Threshold Database', form_type='main_route',
+        row_data=list(df_records.values.tolist()))
 
 @app.route('/editrecord', methods=['POST'])
 def editrecord():

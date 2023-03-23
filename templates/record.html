@@ -309,9 +309,9 @@
                                                 </div>
                                                 <div class="col-lg-9">
                                                     <select required class="form-control" id="appTags" data-choices data-choices-removeItem name="appTags" multiple>
-                                                            <option value="A1.2">A1.2</option>
-                                                            <option value="A1.3">A1.3</option>
-                                                            <option value="A1.6">A1.6</option>
+                                                            {% for row in row_data %}
+                                                                <option value="{{row[0]}}">{{row[0]}}</option>
+                                                            {% endfor %} 
                                                     </select>
                                                 </div>
                                             </div>
