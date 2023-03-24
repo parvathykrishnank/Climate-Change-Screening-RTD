@@ -4,15 +4,15 @@
 <path d="M18.5665 123.793V300.835" stroke="url(#paint0_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M39.3868 106.09V327.392" stroke="url(#paint1_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M60.211 150.35V283.131" stroke="url(#paint2_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M81.0314 168.054V256.575" stroke="url(#paint3_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M81.0314 168.055V256.576" stroke="url(#paint3_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M101.856 132.646V291.984" stroke="url(#paint4_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M122.676 114.942V318.54" stroke="url(#paint5_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M143.5 141.499V291.984" stroke="url(#paint6_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M164.32 141.499V291.984" stroke="url(#paint7_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
 <path opacity="0.5" d="M455.816 12.5718V418.638" stroke="url(#paint8_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
 <path opacity="0.5" d="M434.996 56.7095V374.5" stroke="url(#paint9_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
-<path opacity="0.5" d="M414.176 74.3645V356.845" stroke="url(#paint10_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
-<path opacity="0.5" d="M393.351 39.0549V392.156" stroke="url(#paint11_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.5" d="M414.176 74.3643V356.845" stroke="url(#paint10_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
+<path opacity="0.5" d="M393.351 39.0547V392.156" stroke="url(#paint11_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
 <path opacity="0.5" d="M372.531 21.3999V409.811" stroke="url(#paint12_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M351.707 83.0571V347.883" stroke="url(#paint13_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M330.887 127.195V303.745" stroke="url(#paint14_linear_5896_128005)" stroke-width="1.1436" stroke-linecap="round" stroke-linejoin="round"/>
@@ -38,7 +38,7 @@
 <stop stop-color="#7577EC"/>
 <stop offset="1" stop-color="#4345AA" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="paint3_linear_5896_128005" x1="81.0314" y1="168.054" x2="81.0314" y2="256.575" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint3_linear_5896_128005" x1="81.0314" y1="168.055" x2="81.0314" y2="256.576" gradientUnits="userSpaceOnUse">
 <stop stop-color="#7577EC"/>
 <stop offset="1" stop-color="#4345AA" stop-opacity="0"/>
 </linearGradient>
@@ -66,11 +66,11 @@
 <stop stop-color="#7577EC"/>
 <stop offset="1" stop-color="#4345AA" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="paint10_linear_5896_128005" x1="414.176" y1="74.3645" x2="414.176" y2="356.845" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint10_linear_5896_128005" x1="414.176" y1="74.3643" x2="414.176" y2="356.845" gradientUnits="userSpaceOnUse">
 <stop stop-color="#7577EC"/>
 <stop offset="1" stop-color="#4345AA" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="paint11_linear_5896_128005" x1="393.351" y1="39.0549" x2="393.351" y2="392.156" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint11_linear_5896_128005" x1="393.351" y1="39.0547" x2="393.351" y2="392.156" gradientUnits="userSpaceOnUse">
 <stop stop-color="#7577EC"/>
 <stop offset="1" stop-color="#4345AA" stop-opacity="0"/>
 </linearGradient>
