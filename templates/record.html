@@ -305,19 +305,6 @@
 
                                             <div class="row mb-3">
                                                 <div class="col-lg-3">
-                                                    <label for="appTags" class="form-label">NACE Code Tags</label>
-                                                </div>
-                                                <div class="col-lg-9">
-                                                    <select required class="form-control" id="appTags" data-choices data-choices-removeItem name="appTags" multiple>
-                                                            {% for row in row_data %}
-                                                                <option value="{{row[0]}}">{{row[0]}}</option>
-                                                            {% endfor %} 
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="row mb-3">
-                                                <div class="col-lg-3">
                                                     <label for="assetTags" class="form-label">Asset Types</label>
                                                 </div>
                                                 <div class="col-lg-9">
@@ -328,6 +315,19 @@
                                                             <option value="Public Housing Stock">Public Housing Stock</option>
                                                             <option value="Public Buildings">Public Buildings</option>
                                                             <option value="Heritage Access">Heritage Access</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col-lg-3">
+                                                    <label for="appTags" class="form-label">NACE Code Tags</label>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <select required class="form-control" id="appTags" data-choices data-choices-removeItem name="appTags" multiple>
+                                                            {% for row in row_data %}
+                                                                <option value="{{row[0]}}">{{row[0]}}</option>
+                                                            {% endfor %} 
                                                     </select>
                                                 </div>
                                             </div>
