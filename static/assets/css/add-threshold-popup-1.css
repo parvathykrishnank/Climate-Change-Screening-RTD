@@ -22,10 +22,6 @@
 }
 
 .add-threshold-popup-1 .add-new-threshold {
-  color: var(--neutral1300);
-  font-family: var(--font-family-inter);
-  font-size: 20px;
-  font-weight: 600;
   letter-spacing: -0.34px;
   line-height: 32px;
   margin-top: -1.00px;
@@ -102,6 +98,23 @@
   width: 250px;
 }
 
+.add-threshold-popup-1 .frame-12015 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  width: fit-content;
+}
+
+.add-threshold-popup-1 .frame-1201 {
+  align-items: flex-start;
+  display: flex;
+  gap: 70px;
+  position: relative;
+  width: fit-content;
+}
+
 .add-threshold-popup-1 .field-base {
   align-items: flex-start;
   display: flex;
@@ -128,6 +141,61 @@
   position: absolute;
   top: 5px;
   width: 20px;
+}
+
+.add-threshold-popup-1 .field-base-4 {
+  height: 126px;
+  width: 492px;
+}
+
+.add-threshold-popup-1 .surname {
+  color: var(--contenttertiary);
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.add-threshold-popup-1 .frame-1-5 {
+  align-self: stretch;
+  background-color: var(--neutral50);
+  border: 1px solid;
+  border-color: var(--borderprimary);
+  border-radius: 5px;
+  height: 108px;
+  min-width: 492px;
+  position: relative;
+}
+
+.add-threshold-popup-1 .chevron-1-1 {
+  left: 464px;
+  top: 10px;
+}
+
+.add-threshold-popup-1 .field-base-5 {
+  height: 53px;
+  width: 492px;
+}
+
+.add-threshold-popup-1 .url-to-research-if-available {
+  color: var(--contenttertiary);
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.add-threshold-popup-1 .frame-1-6 {
+  align-self: stretch;
+  background-color: var(--neutral50);
+  border: 1px solid;
+  border-color: var(--borderprimary);
+  border-radius: 5px;
+  height: 30px;
+  min-width: 492px;
+  position: relative;
 }
 
 .add-threshold-popup-1 .line-146 {
@@ -167,6 +235,86 @@
   align-items: flex-start;
   flex-direction: column;
   gap: 16px;
+}
+
+.add-threshold-popup-1 .field-base-1 {
+  width: 210px;
+}
+
+.add-threshold-popup-1 .frame-1-1 {
+  align-self: stretch;
+  background-color: var(--neutral50);
+  border: 1px solid;
+  border-color: var(--borderprimary);
+  border-radius: 5px;
+  height: 30px;
+  min-width: 210px;
+  position: relative;
+}
+
+.add-threshold-popup-1 .chevron-1-2 {
+  left: 182px;
+  top: 5px;
+}
+
+.add-threshold-popup-1 .overlap-group {
+  height: 20px;
+  position: relative;
+  top: 5px;
+  width: 268px;
+}
+
+.add-threshold-popup-1 .input-text {
+  color: var(--contentsecondary);
+  font-weight: 400;
+  height: 16px;
+  left: 8px;
+  line-height: normal;
+  position: absolute;
+  top: 1px;
+  width: 260px;
+}
+
+.add-threshold-popup-1 .chevron-1-5 {
+  left: 182px;
+  top: 0;
+}
+
+.add-threshold-popup-1 .frame-11878 {
+  align-items: flex-start;
+  display: flex;
+  gap: 30px;
+  position: relative;
+  width: fit-content;
+}
+
+.add-threshold-popup-1 .frame-11877 {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  width: fit-content;
+}
+
+.add-threshold-popup-1 .field-base-2 {
+  opacity: 0.5;
+  width: 100px;
+}
+
+.add-threshold-popup-1 .frame-1-2 {
+  align-self: stretch;
+  background-color: var(--neutral50);
+  border: 1px solid;
+  border-color: var(--borderprimary);
+  border-radius: 5px;
+  height: 30px;
+  min-width: 100px;
+  position: relative;
+}
+
+.add-threshold-popup-1 .chevron-1-3 {
+  left: 72px;
+  top: 5px;
 }
 
 .add-threshold-popup-1 .icon-information {
@@ -216,6 +364,27 @@
   gap: 19px;
 }
 
+.add-threshold-popup-1 .frame-12025 {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 279px;
+  position: relative;
+  width: fit-content;
+}
+
+.add-threshold-popup-1 .frame-1-7 {
+  align-self: stretch;
+  background-color: var(--neutral50);
+  border: 1px solid;
+  border-color: var(--borderprimary);
+  border-radius: 5px;
+  height: 35px;
+  min-width: 211px;
+  position: relative;
+}
+
 .add-threshold-popup-1 .overlap-group-1 {
   height: 20px;
   position: relative;
@@ -223,10 +392,94 @@
   width: 268px;
 }
 
+.add-threshold-popup-1 .input-text-1 {
+  color: var(--contentsecondary);
+  font-weight: 400;
+  height: 16px;
+  left: 8px;
+  line-height: normal;
+  position: absolute;
+  top: 2px;
+  width: 260px;
+}
+
+.add-threshold-popup-1 .chevron-1-6 {
+  left: 183px;
+  top: 0;
+}
+
+.add-threshold-popup-1 .frame-12023 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  padding: 0px 0px 10px;
+  position: relative;
+  width: fit-content;
+}
+
+.add-threshold-popup-1 .n1 {
+  color: var(--contenttertiary);
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.add-threshold-popup-1 .frame-12023-item {
+  color: var(--contenttertiary);
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  width: fit-content;
+}
+
+.add-threshold-popup-1 .frame-12019 {
+  align-items: flex-end;
+  display: flex;
+  gap: 17px;
+  position: relative;
+  width: fit-content;
+}
+
+.add-threshold-popup-1 .field-base-3 {
+  width: 96px;
+}
+
 .add-threshold-popup-1 .label {
+  color: var(--contenttertiary);
+  font-family: var(--font-family-inter-italic);
+  font-size: var(--font-size-xxs);
+  font-style: italic;
+  font-weight: 400;
   letter-spacing: 0;
   line-height: normal;
   margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
+.add-threshold-popup-1 .frame-1-3 {
+  align-self: stretch;
+  background-color: var(--neutral50);
+  border: 1px solid;
+  border-color: var(--borderprimary);
+  border-radius: 5px;
+  height: 35px;
+  min-width: 96px;
+  position: relative;
+}
+
+.add-threshold-popup-1 .chevron-1-4 {
+  left: 68px;
+  top: 7px;
+}
+
+.add-threshold-popup-1 .frame-1202 {
+  align-items: center;
+  display: flex;
+  gap: 17px;
   position: relative;
   width: fit-content;
 }
@@ -251,6 +504,12 @@
   padding: 6px 12px;
   position: relative;
   width: fit-content;
+}
+
+.add-threshold-popup-1 .plus {
+  height: 14px;
+  min-width: 14px;
+  position: relative;
 }
 
 .add-threshold-popup-1 .button-1 {
@@ -307,11 +566,44 @@
   width: fit-content;
 }
 
+.add-threshold-popup-1 .percent-1 {
+  letter-spacing: 0.14px;
+  line-height: 16px;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 27px;
+}
+
 .add-threshold-popup-1 .percent {
   letter-spacing: 0.14px;
   line-height: 16px;
   position: relative;
   text-align: center;
+  white-space: nowrap;
+  width: 31px;
+}
+
+.add-threshold-popup-1 .percent-2 {
+  color: var(--contenttertiary);
+  font-weight: 500;
+  left: 13px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  text-decoration: underline;
+  top: 332px;
+  width: 31px;
+}
+
+.add-threshold-popup-1 .percent-3 {
+  left: 0;
+  letter-spacing: 0.14px;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  top: 132px;
   white-space: nowrap;
   width: 31px;
 }
@@ -325,6 +617,29 @@
   width: 1px;
 }
 
+.add-threshold-popup-1 .probability-of-disruption-damage-loss {
+  color: transparent;
+  font-family: var(--font-family-inter);
+  font-size: 10px;
+  font-weight: 600;
+  left: -108px;
+  letter-spacing: 0.10px;
+  line-height: 16px;
+  position: absolute;
+  top: 108px;
+  transform: rotate(-90.00deg);
+  white-space: nowrap;
+  width: 234px;
+}
+
+.add-threshold-popup-1 .span0-1 {
+  color: var(--contenttertiary);
+}
+
+.add-threshold-popup-1 .span1 {
+  color: var(--contentdisabled);
+}
+
 .add-threshold-popup-1 .frame-11968 {
   align-items: flex-start;
   display: flex;
@@ -335,6 +650,21 @@
   position: absolute;
   top: 61px;
   width: fit-content;
+}
+
+.add-threshold-popup-1 .line-1455 {
+  height: 302px;
+  margin-bottom: -133.00px;
+  min-width: 1px;
+  position: relative;
+}
+
+.add-threshold-popup-1 .line-145 {
+  height: 388px;
+  margin-bottom: -219.00px;
+  min-width: 1px;
+  object-fit: cover;
+  position: relative;
 }
 
 .add-threshold-popup-1 .vector-53 {
@@ -411,10 +741,25 @@
   width: 20px;
 }
 
+.add-threshold-popup-1 .frame-12034 {
+  align-items: flex-start;
+  background-color: var(--yellow200);
+  border: 1px solid;
+  border-color: var(--neutral50);
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: -1.00px;
+  margin-top: -1.00px;
+  padding: 0px 6px;
+  position: relative;
+  width: 21px;
+}
+
 .add-threshold-popup-1 .x100 {
   color: var(--yellow800);
   font-family: var(--font-family-inter);
-  font-size: var(--font-size-xxxxxs);
+  font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.14px;
   line-height: 16px;
@@ -426,16 +771,58 @@
   width: 31px;
 }
 
+.add-threshold-popup-1 .frame-12035-1 {
+  align-items: flex-start;
+  background-color: var(--yellow400);
+  border: 1px solid;
+  border-color: var(--neutral50);
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: -1.00px;
+  margin-top: -1.00px;
+  padding: 0px 6px;
+  position: relative;
+  width: 21px;
+}
+
 .add-threshold-popup-1 .x100-1 {
   color: var(--yellow900);
   margin-left: -12.00px;
   margin-right: -10.00px;
 }
 
+.add-threshold-popup-1 .frame-11951 {
+  align-items: flex-start;
+  background-color: var(--red200);
+  border: 1px solid;
+  border-color: var(--neutral50);
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: -1.00px;
+  margin-top: -1.00px;
+  padding: 0px 6px;
+  position: relative;
+  width: 22px;
+}
+
 .add-threshold-popup-1 .x100-2 {
   color: var(--red800);
   margin-left: -11.50px;
   margin-right: -9.50px;
+}
+
+.add-threshold-popup-1 .climate-hazard-eg-degree-c-heatwave {
+  align-self: flex-end;
+  color: transparent;
+  font-family: var(--font-family-inter);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.10px;
+  line-height: 16px;
+  min-height: 36px;
+  width: 263px;
 }
 
 .add-threshold-popup-1 .buttons {
@@ -511,15 +898,38 @@
   width: fit-content;
 }
 
+.add-threshold-popup-1 .chevron-1-7 {
+  height: 20px;
+  position: absolute;
+  width: 20px;
+}
+
+.add-threshold-popup-1 .field-base-6 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: relative;
+}
+
 .add-threshold-popup-1 .frame-120-3 {
   display: flex;
   position: relative;
   width: fit-content;
 }
 
+.add-threshold-popup-1 .label-11 {
+  color: var(--contenttertiary);
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
 .add-threshold-popup-1 .x100-3 {
   font-family: var(--font-family-inter);
-  font-size: var(--font-size-xxxxxs);
+  font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.14px;
   line-height: 16px;

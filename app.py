@@ -90,6 +90,9 @@ def editrecord():
         button_text = 'Are you sure you want to update this record?'
         return render_template('record.html', button_text = button_text, form_type='edit')
 
+@app.route('/release-notes')
+def release_notes():
+    return render_template('release-notes.html')
 
 if __name__ == "__main__":
    app.run(debug=True,port=8080)

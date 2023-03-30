@@ -33,10 +33,47 @@
   width: fit-content;
 }
 
+.rtd-by-nace-code .breadcrump {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  padding: 10px 0px;
+  position: relative;
+  width: 186px;
+}
+
+.rtd-by-nace-code .page {
+  color: var(--contenttertiary);
+  font-weight: 400;
+  line-height: normal;
+  margin-right: -1.00px;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
+}
+
 .rtd-by-nace-code .remix-iconslinesystemarrow {
   height: 18px;
   min-width: 18px;
   position: relative;
+}
+
+.rtd-by-nace-code .breadcrump-1 {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  padding: 10px 0px;
+  position: relative;
+  width: fit-content;
+}
+
+.rtd-by-nace-code .page-1 {
+  color: var(--contentprimary);
+  font-weight: 400;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  width: fit-content;
 }
 
 .rtd-by-nace-code .header-with-links {
@@ -48,6 +85,12 @@
   min-width: 1440px;
   position: absolute;
   top: 0;
+}
+
+.rtd-by-nace-code .header-container {
+  height: 50px;
+  position: relative;
+  width: 1440px;
 }
 
 .rtd-by-nace-code .header {
@@ -63,6 +106,13 @@
   position: absolute;
   top: 0;
   width: auto;
+}
+
+.rtd-by-nace-code .image-44 {
+  height: 30px;
+  margin-bottom: 0;
+  object-fit: cover;
+  width: 35px;
 }
 
 .rtd-by-nace-code .frame-22 {
@@ -83,15 +133,6 @@
   width: fit-content;
 }
 
-.rtd-by-nace-code .country-overview {
-  color: var(--neutral800);
-  font-weight: 400;
-  line-height: normal;
-  margin-top: -1.00px;
-  position: relative;
-  width: fit-content;
-}
-
 .rtd-by-nace-code .header-tabs-1 {
   background-color: var(--neutral1100);
   margin-right: -19.00px;
@@ -99,13 +140,27 @@
   position: relative;
 }
 
-.rtd-by-nace-code .country-overview-1 {
-  color: var(--violet400);
-  font-weight: 400;
-  line-height: normal;
-  margin-top: -1.00px;
+.rtd-by-nace-code .account {
+  height: 24px;
+  margin-left: 812px;
   position: relative;
-  width: fit-content;
+  width: 24px;
+}
+
+.rtd-by-nace-code .header-tabs-2 {
+  background-color: var(--neutral1100);
+  left: 542px;
+  padding: 17px 16px;
+  position: absolute;
+  top: 0;
+}
+
+.rtd-by-nace-code .header-tabs-3 {
+  background-color: var(--contentprimary);
+  left: 460px;
+  padding: 16px;
+  position: absolute;
+  top: 0;
 }
 
 .rtd-by-nace-code .group-11245 {
