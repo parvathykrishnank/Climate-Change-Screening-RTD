@@ -17,6 +17,15 @@ def index():
     df_records = df_records.fillna('')
     return render_template('index.html',row_data=list(df_records.values.tolist()))
 
+@app.route('/references')
+def references():
+    df_records = pd.read_excel('references.xlsx').astype(str)
+    df_records = df_records.dropna(how='all')
+    df_records = df_records.fillna('')
+    df_records = df_records.sort_values(by='Publication Year')
+    return render_template('references.html',row_data=list(df_records.values), col_names=list(df_records.columns), 
+        length_cols = len(list(df_records.columns))-1, length_records = len(list(df_records.columns)))
+
 @app.route('/record',methods=['POST'])
 def record():
     if request.method == 'POST':
