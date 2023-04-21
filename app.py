@@ -26,6 +26,10 @@ def references():
     return render_template('references.html',row_data=list(df_records.values), col_names=list(df_records.columns), 
         length_cols = len(list(df_records.columns))-1, length_records = len(list(df_records.columns)))
 
+@app.route('/datastories')
+def datastories():
+    return render_template('data-stories.html')
+
 @app.route('/record',methods=['POST'])
 def record():
     if request.method == 'POST':

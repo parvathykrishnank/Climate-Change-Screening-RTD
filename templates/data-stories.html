@@ -129,7 +129,7 @@
                                     <li class="nav-item">
                                         <a href="/record" class="nav-link" data-key="t-newrec"> Add New Record </a>
                                     </li>
-                                    <li class="nav-item">
+                                     <li class="nav-item">
                                         <a href="/datastories" class="nav-link" data-key="t-ref"> Data Stories </a>
                                     </li>
                                     <li class="nav-item">
@@ -174,67 +174,53 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header d-flex align-items-center">
-                                    <h5 class="card-title mb-0 flex-grow-1">Risk Threshold Database</h5>
-                                    <div>
-                                        <a href='/record'><button id="addRecord" class="btn btn-primary">Add New Record</button></a>
-                                    </div>
+                                    <h5 class="card-title mb-0 flex-grow-1">Data Stories</h5>
                                 </div>
                                 <div class="card-body">
-                                    <table id="scroll-horizontal" class="table table-bordered dt-responsive nowrap align-middle mdl-data-table" style="width:100%">
-                                        <thead>
-                                            <tr>
-                                                <th>ID <br/><font size="1">Short Description</font></th>
-                                                <th>Climate Parameter <br/><font size="1">Risk Trigger</font></th>
-                                                <th>Template</th>
-                                                <th>Value</th>
-                                                <th>Level of Disruption</th>
-                                                <th>Threshold <br/><font size="1">Probability of Disruption</font></th>
-                                                <th>Applicable asset types <br/><font size="1">Applicable NACE Codes</font></th>
-                                                <th>Country Tags</th>
-                                                <th>Description (link)</th>
-                                                <th>Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {% for row in row_data %}
-                                            <tr>
-                                                <td>{{row[0]}}<br/><font size="1">{{row[15]}}</font></td>
-                                                <td>{{row[10]}}<br/><font size="1">{{row[1]}}</font></td>
-                                                <td>{{row[2]}}</td>
-                                                <td>{{row[3]}} {{row[4]}}</td>  
-                                                <th>{{row[16]}}</th>
-                                                <td><font size="0.5">{{row[9]}}  </font>
-                                                    <span class="badge" style="background-color:#ffe380;">{{row[5]}}</span> 
-                                                    <span class="badge" style="background-color:#ffc400;">{{row[6]}}</span>
-                                                    <span class="badge" style="background-color:#ff8b00;">{{row[7]}}</span>
-                                                    <span class="badge" style="background-color:#de0b16;">{{row[8]}}</span></td>
-                                                <th>{{row[17]}} <br/><font size="1">{{row[11]}}</font></th>
-                                                <td>{{row[12]}}</td>    
 
-                                                <td><a href="{{row[14]}}" target="_blank">{{row[13]}}</a></td>
-                                                <td>
-                                                    <div class="dropdown d-inline-block">
-                                                        <form action="/editrecord" method='POST'>
-                                                            <input type="text" id="recordID" name="recordID" value="{{row[0]}}" hidden />
-                                                            <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <i class="ri-more-fill align-middle"></i>
-                                                            </button>
-                                                            <ul class="dropdown-menu dropdown-menu-end">
-                                                                <li><a class="dropdown-item edit-item-btn"><button id="optionTags" name="optionTags" value="editRecord" class="btn btn-primary" type="submit"><i class="ri-pencil-fill align-bottom me-2 text-muted"></i> Edit</button></a></li>
-                                                                <li>
-                                                                    <a class="dropdown-item remove-item-btn"><button name="optionTags" id="optionTags" value="deleteRecord" class="btn btn-primary" type="submit">
-                                                                        <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i> Delete</button>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </form>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            {% endfor %} 
+                                    <div class="row">
 
-                                        </tbody>
-                                    </table>
+                                        <div class="col-4">
+                                            <div class="card">
+                                              <img src="../static/assets/images/data_stories/img1.jpg" height="250" class="card-img-top" alt="When Things Fall Apart">
+                                              <div class="card-body">
+                                                <h5 class="card-title">When Things Fall Apart</h5>
+                                                <p class="card-text">Exploring Climate Change Risk Scenario Threshold Implications</p>
+                                                <p>Increasing climate change exposures are likely to magnify disruption risks for local social and economic activity, including services associated with public infrastructure. Actual vulnerabilities will depend on the degree of resilience and adaptation to prevailing and amplifying extremes in climate.
+                                                    In the summer of 2022, England for the first-time experienced temperatures of over 40 degrees Celsius. Unaccustomed to these temperature levels, this led to the closure of one London airport and disrupted workplaces. This experience is likely to spur the installation of more air conditioners as one adaptation reaction.
+                                                </p>
+                                                <a href="https://medium.com/@mahdi.fayazbakhsh/when-things-fall-apart-ea315ae28ae8" target="_blank" class="btn btn-primary">Read More</a>
+                                              </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="card">
+                                              <img src="../static/assets/images/data_stories/img2.jpeg" height="250" class="card-img-top" alt="Benchmarking Climate Consequences">
+                                              <div class="card-body">
+                                                <h5 class="card-title">Benchmarking Climate Consequences to Observed Public Asset & Investment Damage & Loss Levels</h5>
+                                                <p class="card-text">Articulating Likely Adverse Consequences for Specific Contexts</p>
+                                                <p>Damage and losses in the context of climate change risks to infrastructure refer to the negative impacts that climate change can have on physical infrastructure such as buildings, roads, bridges, and other critical facilities. Climate change can cause more frequent and severe extreme weather events, such as floods, storms, heatwaves, droughts, and wildfires, which can damage or destroy infrastructure and result in significant social and economic losses.
+                                                </p>
+                                                <a href="#" target="_blank" class="btn btn-primary">Read More</a>
+                                              </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="card">
+                                              <img src="../static/assets/images/data_stories/img3.jpg" height="250" class="card-img-top" alt="Accessing and Visualizing Digital Elevation Models with Python">
+                                              <div class="card-body">
+                                                <h5 class="card-title">Accessing and Visualizing Digital Elevation Models with Python</h5>
+                                                <p class="card-text">A tutorial in Python with openly available DEM data</p>
+                                                <p>This blog summarises how to download, and visualise openly available global Digital Elevation Models for any geographic area of interest using Python</p>
+                                                <a href="https://parvathykrishnank.medium.com/accessing-and-visualizing-digital-elevation-models-with-python-f4fd7f595d46?sk=53957d4f78c96a50bfbbe91daababaa3" class="btn btn-primary" target="_blank">Read More</a>
+                                              </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
                                 </div>
                             </div>
                         </div><!--end col-->
