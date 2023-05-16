@@ -15,6 +15,29 @@ def index():
     df_records = df_records.dropna(how='all')
     df_records = df_records[df_records['ID'].astype(str)!='nan']
     df_records = df_records.fillna('')
+
+    df_records['color_array'] = df_records[['T1','T2','T3','T4']].to_numpy().tolist()
+    df_records['color_array'] = df_records['color_array'].apply(lambda color_ar:[x for x in color_ar if x != ''])   
+    
+    def get_color_list(color_array):
+        if(len(color_array)==3):
+            color_list = ['#ffe380','#ff8b00','#de0b16','white']
+
+        if(len(color_array)==4):
+            color_list = ['#ffe380','#ffc400','#ff8b00','#de0b16']
+
+        if(len(color_array)==2):
+            color_list = ['#ffe380','#de0b16','white','white']
+
+        return(color_list)
+
+    df_records['color_list'] = df_records['color_array'].apply(get_color_list)
+
+    df_records['C1'] = df_records['color_list'].apply(lambda x:x[0])
+    df_records['C2'] = df_records['color_list'].apply(lambda x:x[1])
+    df_records['C3'] = df_records['color_list'].apply(lambda x:x[2])
+    df_records['C4'] = df_records['color_list'].apply(lambda x:x[3])
+
     return render_template('index.html',row_data=list(df_records.values.tolist()))
 
 @app.route('/references')
