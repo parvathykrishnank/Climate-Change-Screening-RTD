@@ -183,7 +183,7 @@
                                     <table id="scroll-horizontal" class="table table-bordered dt-responsive nowrap align-middle mdl-data-table" style="width:100%">
                                         <thead>
                                             <tr>
-                                                <th>Short Description</th>
+                                                <th>Short Description<br/><font size="1">Unique ID</font></th>
                                                 <th>Climate Parameter <br/><font size="1">Risk Trigger</font></th>
                                                 <th>Template</th>
                                                 <th>Value</th>
@@ -198,7 +198,7 @@
                                         <tbody>
                                             {% for row in row_data %}
                                             <tr>
-                                                <td>{{row[15]}}</td>
+                                                <td>{{row[15]}}<br/><font size="1">{{row[0]}}</font></td>
                                                 <td>{{row[10]}}<br/><font size="1">{{row[1]}}</font></td>
                                                 <td>{{row[2]}}</td>
                                                 <td>{{row[3]}} {{row[4]}}</td>  
