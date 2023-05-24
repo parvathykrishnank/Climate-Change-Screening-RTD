@@ -184,14 +184,16 @@
                                         <thead>
                                             <tr>
                                                 <th>Short Description<br/><font size="1">Unique ID</font></th>
+                                                <th>Asset Type Level 1<br/><font size="1">Asset Type Level 2</font></th>
                                                 <th>Climate Parameter <br/><font size="1">Risk Trigger</font></th>
                                                 <th>Template</th>
                                                 <th>Value</th>
                                                 <th>Level of Disruption</th>
                                                 <th>Threshold <br/><font size="1">Probability of Disruption</font></th>
-                                                <th>Applicable asset types <br/><font size="1">Applicable NACE Codes</font></th>
+                                                <th>Applicable NACE Codes</th>
                                                 <th>Country Tags</th>
                                                 <th>Description (link)</th>
+                                                <th>Date</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
@@ -199,19 +201,23 @@
                                             {% for row in row_data %}
                                             <tr>
                                                 <td>{{row[15]}}<br/><font size="1">{{row[0]}}</font></td>
+                                                <td>{{row[17]}}<br/><font size="1">{{row[18]}}</font></td>
+
                                                 <td>{{row[10]}}<br/><font size="1">{{row[1]}}</font></td>
                                                 <td>{{row[2]}}</td>
                                                 <td>{{row[3]}} {{row[4]}}</td>  
-                                                <th>{{row[16]}}</th>
+                                                <td>{{row[16]}}</td>
                                                 <td><font size="0.5">{{row[9]}}  </font>
-                                                    <span class="badge" style="background-color:{{row[20]}};">{{row[5]}}</span> 
-                                                    <span class="badge" style="background-color:{{row[21]}};">{{row[6]}}</span>
-                                                    <span class="badge" style="background-color:{{row[22]}};">{{row[7]}}</span>
-                                                    <span class="badge" style="background-color:{{row[23]}};">{{row[8]}}</span></td>
-                                                <th>{{row[17]}} <br/><font size="1">{{row[11]}}</font></th>
+                                                    <span class="badge" style="background-color:{{row[22]}};">{{row[5]}}</span> 
+                                                    <span class="badge" style="background-color:{{row[23]}};">{{row[6]}}</span>
+                                                    <span class="badge" style="background-color:{{row[24]}};">{{row[7]}}</span>
+                                                    <span class="badge" style="background-color:{{row[25]}};">{{row[8]}}</span></td>
+                                                <td>{{row[11]}}</td>
                                                 <td>{{row[12]}}</td>    
 
                                                 <td><a href="{{row[14]}}" target="_blank">{{row[13]}}</a></td>
+                                                <td>{{row[19]}}</td>
+
                                                 <td>
                                                     <div class="dropdown d-inline-block">
                                                         <form action="/editrecord" method='POST'>

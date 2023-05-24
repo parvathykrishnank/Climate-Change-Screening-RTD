@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import pandas as pd
 import random
 import string
+from datetime import date
 
 app = Flask(__name__)
 
@@ -37,6 +38,9 @@ def index():
     df_records['C2'] = df_records['color_list'].apply(lambda x:x[1])
     df_records['C3'] = df_records['color_list'].apply(lambda x:x[2])
     df_records['C4'] = df_records['color_list'].apply(lambda x:x[3])
+
+    #for x in range(0,len(list(df_records.columns))):
+    #    print(x,"-",list(df_records.columns)[x],"-",(df_records.values[5][x]))
 
     return render_template('index.html',row_data=list(df_records.values.tolist()))
 
@@ -77,8 +81,11 @@ def record():
         appTags = request.form.getlist('appTags')
         appTags = ','.join(appTags)
 
-        assetTags = request.form.getlist('assetTags')
-        assetTags = ','.join(assetTags)
+        assetTags1 = request.form.getlist('assetTags1')
+        assetTags1 = ','.join(assetTags1)
+
+        assetTags2 = request.form.getlist('assetTags2')
+        assetTags2 = ','.join(assetTags2)
 
         descriptionText = request.form['descriptionText']
         urlMore = request.form['urlMore']
@@ -87,15 +94,18 @@ def record():
 
         id_str1 = str(riskTrigger.split(' ')[0][0])+''+str(riskTrigger.split(' ')[1][0])
         id_str2 = str(templateChoice.split(' ')[0][0])+''+str(templateChoice.split(' ')[1][0])+''+str(templateChoice.split(' ')[2][0])
+        
         idRandom = ''.join(random.choice(string.printable) for i in range(8))
         idRandom = id_str1+'-'+id_str2+'-'+idRandom
+
+        todayDate = date.today()
 
         df_records = pd.read_excel('database.xlsx')
         df_new_record = pd.DataFrame([[idRandom,riskTrigger,templateChoice,
                     valueParameter,unitValue,
                     thres1,thres2,thres3,thres4,unitThreshold,
                     climateParameter,appTags,countryTags,descriptionText,urlMore,
-                    shortDescription,levelDisruption,assetTags]])
+                    shortDescription,levelDisruption,assetTags1,assetTags2,todayDate]])
         
         df_new_record.columns = df_records.columns
         
@@ -108,10 +118,13 @@ def record():
 def recordroute():
     df_records = pd.read_excel('nace_code_list.xlsx')
     df_records_asset = pd.read_excel('asset_tags_list.xlsx')
+    df_records_asset1 = pd.read_excel('asset_tags_list1.xlsx')
 
     return render_template('record.html',
         button_text='Update Risk Threshold Database', form_type='main_route',
-        row_data=list(df_records.values.tolist()), row_data_assets=list(df_records_asset.values.tolist()))
+        row_data=list(df_records.values.tolist()), 
+        row_data_assets=list(df_records_asset.values.tolist()),
+        row_data_assets1=list(df_records_asset1.values.tolist()))
 
 @app.route('/editrecord', methods=['POST'])
 def editrecord():
