@@ -3,6 +3,8 @@ import pandas as pd
 import random
 import string
 from datetime import date
+from sqlalchemy import create_engine
+
 
 app = Flask(__name__)
 
@@ -12,7 +14,10 @@ def landing():
 
 @app.route('/index')
 def index():
-    df_records = pd.read_excel('database.xlsx')
+
+    engine = create_engine('postgresql://postgres:getdatabasemirra@128.199.226.170:5432/gpbprtd')
+    df_records = pd.read_sql('threshold_db_new',engine)
+    
     df_records = df_records.dropna(how='all')
     df_records = df_records[df_records['ID'].astype(str)!='nan']
     df_records = df_records.fillna('')
@@ -64,14 +69,27 @@ def record():
         riskTrigger = request.form['riskTrigger']
         templateChoice = request.form['templateChoice']
         levelDisruption = request.form['levelDisruption']
-        
+
+        def get_float_param(param):
+            if(param!=''):
+                param = float(param)
+            else:
+                param = None
+            return param
+
         valueParameter = request.form['valueParameter']
+        valueParameter = get_float_param(valueParameter)
+
         unitValue = request.form['unitValue']
         
         thres1 = request.form['thres1']
+        thres1 = get_float_param(thres1)
         thres2 = request.form['thres2']
+        thres2 = get_float_param(thres2)
         thres3 = request.form['thres3']
+        thres3 = get_float_param(thres3)
         thres4 = request.form['thres4']
+        thres4 = get_float_param(thres4)
 
         unitThreshold = request.form['unitThreshold']
 
@@ -100,7 +118,9 @@ def record():
 
         todayDate = date.today()
 
-        df_records = pd.read_excel('database.xlsx')
+        engine = create_engine('postgresql://postgres:getdatabasemirra@128.199.226.170:5432/gpbprtd')
+        df_records = pd.read_sql('threshold_db_new',engine)
+
         df_new_record = pd.DataFrame([[idRandom,riskTrigger,templateChoice,
                     valueParameter,unitValue,
                     thres1,thres2,thres3,thres4,unitThreshold,
@@ -108,10 +128,7 @@ def record():
                     shortDescription,levelDisruption,assetTags1,assetTags2,todayDate]])
         
         df_new_record.columns = df_records.columns
-        
-        df_combined_records = df_records.append(df_new_record)
-
-        df_combined_records.to_excel('database.xlsx',index=False)
+        df_new_record.to_sql('threshold_db_new', con=engine, if_exists='append', index=False)
         return redirect(url_for('index'))
 
 @app.route('/record', methods=['GET'])
