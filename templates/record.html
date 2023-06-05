@@ -351,7 +351,7 @@
                                                     <label for="assetTags2" class="form-label">Asset Type Level 2</label>
                                                 </div>
                                                 <div class="col-lg-9">
-                                                    <select required class="form-control" id="assetTags2" data-choices data-choices-removeItem name="assetTags" multiple>
+                                                    <select class="form-control" id="assetTags2" data-choices data-choices-removeItem name="assetTags" multiple>
                                                              {% for row in row_data_assets1 %}
                                                                 <option value="{{row[0]}}">{{row[0]}}</option>
                                                             {% endfor %} 
@@ -364,7 +364,7 @@
                                                     <label for="appTags" class="form-label">NACE Code Tags</label>
                                                 </div>
                                                 <div class="col-lg-9">
-                                                    <select required class="form-control" id="appTags" data-choices data-choices-removeItem name="appTags" multiple>
+                                                    <select class="form-control" id="appTags" data-choices data-choices-removeItem name="appTags" multiple>
                                                             {% for row in row_data %}
                                                                 <option value="{{row[0]}}">{{row[0]}}</option>
                                                             {% endfor %} 
@@ -377,7 +377,7 @@
                                                     <label for="descriptionText" class="form-label">Description</label>
                                                 </div>
                                                 <div class="col-lg-9">
-                                                    <textarea required class="form-control" id="descriptionText" name="descriptionText" rows="4"></textarea>
+                                                    <textarea class="form-control" id="descriptionText" name="descriptionText" rows="4"></textarea>
                                                 </div>
                                             </div>
 
