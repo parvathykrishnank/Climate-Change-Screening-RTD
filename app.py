@@ -22,7 +22,7 @@ def index():
     df_records = df_records[df_records['ID'].astype(str)!='nan']
     df_records = df_records.fillna('')
 
-    df_records['color_array'] = df_records[['T1','T2','T3','T4']].to_numpy().tolist()
+    df_records['color_array'] = df_records[['t1','t2','t3','t4']].to_numpy().tolist()
     df_records['color_array'] = df_records['color_array'].apply(lambda color_ar:[x for x in color_ar if x != ''])   
     
     def get_color_list(color_array):
@@ -43,9 +43,6 @@ def index():
     df_records['C2'] = df_records['color_list'].apply(lambda x:x[1])
     df_records['C3'] = df_records['color_list'].apply(lambda x:x[2])
     df_records['C4'] = df_records['color_list'].apply(lambda x:x[3])
-
-    #for x in range(0,len(list(df_records.columns))):
-    #    print(x,"-",list(df_records.columns)[x],"-",(df_records.values[5][x]))
 
     return render_template('index.html',row_data=list(df_records.values.tolist()))
 

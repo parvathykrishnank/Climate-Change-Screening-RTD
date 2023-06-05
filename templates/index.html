@@ -31,6 +31,11 @@
     <link href="../static/assets/css/app.min.css" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="../static/assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .wrapped-link {
+          white-space: normal;
+        }
+    </style>
 
 </head>
 
@@ -215,7 +220,7 @@
                                                 <td>{{row[11]}}</td>
                                                 <td>{{row[12]}}</td>    
 
-                                                <td><a href="{{row[14]}}" target="_blank">{{row[13]}}</a></td>
+                                                <td><a href="{{row[14]}}" target="_blank" class="wrapped-link">{{row[13]}}</a></td>
                                                 <td>{{row[19]}}</td>
 
                                                 <td>
@@ -324,7 +329,6 @@
 
     <!-- App js -->
     <script src="../static/assets/js/app.js"></script>
-
 </body>
 
 </html>
