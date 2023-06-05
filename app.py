@@ -19,7 +19,7 @@ def index():
     df_records = pd.read_sql('threshold_db_new',engine)
     
     df_records = df_records.dropna(how='all')
-    df_records = df_records[df_records['ID'].astype(str)!='nan']
+    df_records = df_records[df_records['id'].astype(str)!='nan']
     df_records = df_records.fillna('')
 
     df_records['color_array'] = df_records[['t1','t2','t3','t4']].to_numpy().tolist()
