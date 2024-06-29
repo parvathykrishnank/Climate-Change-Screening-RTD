@@ -8,6 +8,8 @@ from sqlalchemy import create_engine
 
 app = Flask(__name__)
 
+engine = create_engine('postgresql://postgres:getdatabasemirra@128.199.226.170:5432/gpbprtd')
+
 @app.route('/')
 def landing():
     return render_template('rtd-homepage.html')
@@ -15,9 +17,7 @@ def landing():
 @app.route('/index')
 def index():
 
-    engine = create_engine('postgresql://postgres:getdatabasemirra@128.199.226.170:5432/gpbprtd')
     df_records = pd.read_sql('threshold_db_new',engine)
-    
     df_records = df_records.dropna(how='all')
     df_records = df_records[df_records['id'].astype(str)!='nan']
     df_records = df_records.fillna('')
@@ -110,7 +110,7 @@ def record():
         id_str1 = str(riskTrigger.split(' ')[0][0])+''+str(riskTrigger.split(' ')[1][0])
         id_str2 = str(templateChoice.split(' ')[0][0])+''+str(templateChoice.split(' ')[1][0])+''+str(templateChoice.split(' ')[2][0])
         
-        idRandom = ''.join(random.choice(string.printable) for i in range(8))
+        idRandom = ''.join(random.choice(string.ascii_letters + string.digits) for i in range(10))
         idRandom = id_str1+'-'+id_str2+'-'+idRandom
 
         todayDate = date.today()
@@ -158,6 +158,41 @@ def editrecord():
 @app.route('/release-notes')
 def release_notes():
     return render_template('release-notes.html')
+
+@app.route('/record/<record_id>')
+def show_record(record_id):
+    df_records = pd.read_sql('threshold_db_new', engine)
+
+    df_records = df_records.dropna(how='all')
+    df_records = df_records[df_records['id']==record_id]
+
+    if not df_records.empty:
+        df_records = df_records.fillna('')
+        df_records['color_array'] = df_records[['t1','t2','t3','t4']].to_numpy().tolist()
+        df_records['color_array'] = df_records['color_array'].apply(lambda color_ar:[x for x in color_ar if x != ''])   
+        
+        def get_color_list(color_array):
+            if(len(color_array)==3):
+                color_list = ['#ffe380','#ff8b00','#de0b16','white']
+
+            if(len(color_array)==4):
+                color_list = ['#ffe380','#ffc400','#ff8b00','#de0b16']
+
+            if(len(color_array)==2):
+                color_list = ['#ffe380','#de0b16','white','white']
+
+            return(color_list)
+
+        df_records['color_list'] = df_records['color_array'].apply(get_color_list)
+
+        df_records['C1'] = df_records['color_list'].apply(lambda x:x[0])
+        df_records['C2'] = df_records['color_list'].apply(lambda x:x[1])
+        df_records['C3'] = df_records['color_list'].apply(lambda x:x[2])
+        df_records['C4'] = df_records['color_list'].apply(lambda x:x[3])
+        row_data = list(df_records.values.tolist())
+    else:
+        row_data = None
+    return render_template('viewRecord.html', row_data=row_data,record_id=record_id)
 
 if __name__ == "__main__":
    app.run(debug=True,port=8080)
